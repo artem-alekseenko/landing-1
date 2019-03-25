@@ -4,7 +4,7 @@
 * система контроля версий github
 * шаблонизатор и html-препроцессор pug
 * таск-менеджер gulp
-* расширение css sass
+* Sass
 * плагин для загрузки спрайтов spritesmith
 * плагин для удаления модулей rimraf
 * плагин для переименования файлов gulp-rename
@@ -27,7 +27,7 @@
 
 Если не установлен, тогда ставим:
 
-> npm install "gulpjs/gulp#4.0" --save-dev
+> npm install gulp --save-dev
 
 Подробные инструкции по установке gulp 4 можно найти здесь - https://github.com/gulpjs/gulp/blob/master/docs/getting-started/1-quick-start.md
 
