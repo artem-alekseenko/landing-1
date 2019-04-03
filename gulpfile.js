@@ -5,6 +5,8 @@ const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 
@@ -44,6 +46,19 @@ gulp.task('styles:compile', function () {
         .pipe(gulp.dest('build/css'));
 });
 
+/* -------- JS  -------- */
+gulp.task('js', function() {
+    return gulp.src([
+        'source/js/**/*.js'
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('build/js'));
+});
+
+
 /* ------------ Sprite ------------- */
 gulp.task('sprite', function (cb) {
     const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
@@ -81,11 +96,12 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 gulp.task('watch', function () {
     gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
     gulp.watch('source/styles/**/*.scss', gulp.series('styles:compile'));
+    gulp.watch('source/js/**/*.js', gulp.series('js'));
 });
 
 gulp.task('default', gulp.series(
     'clean', //плагин rim-raf удаляет папку buid
-    gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
+    gulp.parallel('templates:compile', 'styles:compile', 'js', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
 )
 );

@@ -13,6 +13,8 @@
 * плагин sourcemaps
 * плагин font-awesome
 * плагин normalize.scss
+* плагин для минификации js-файлов gulp-uglify
+* плагин для объединения js-файлов gulp-concat
 * node.js 10.15.3 и npm 6.9.0
 
 ## Инструкция для старта проекта:
