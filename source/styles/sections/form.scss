@@ -3,8 +3,12 @@
     color: #fff;
     background-color: #1287bf;
 
+    @media (max-width: 810px) {
+        padding: 50px 0 55px 0; 
+    }
+
     .title {
-        margin-bottom: 12px;
+        margin-bottom: 0;
     }
 
     .title__header {
@@ -17,7 +21,7 @@
 
     .btn-down {
         position: relative;
-        margin: auto auto 20px;
+        margin: 14px auto 20px;
         width: 65px;
         height: 65px;
         border: 2px solid #fff;
@@ -37,11 +41,16 @@
     position: relative;
     width: 67%;
     margin: auto;
-    padding: 50px 50px 66px 50px;
+    padding: 50px 50px 57px 50px;
     border-radius: 3px;
     color: #828282;
     text-align: center;
     background: #fff;
+
+    @media (max-width: 810px) {
+        width: 90%;
+        padding: 25px;
+    }
 
     &-container {
         padding-top: 30px;
@@ -81,7 +90,7 @@
     }
 
     &__fields {
-        margin-bottom: 36px;
+        margin-bottom: 31px;
     }
 
     &__input {
@@ -101,5 +110,7 @@
     .button {
         padding: 15px 30px; 
         border: none;
+        font-family: "helvetica-neue-bold";
+        font-size: 0.95rem;
     }
 }

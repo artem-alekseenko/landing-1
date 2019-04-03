@@ -2,6 +2,11 @@
     padding: 110px 0;
     background-color: #de2b24;
     color: #fff;
+
+    @media (max-width: 985px) {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
      
     &__list {
         display: flex;
@@ -18,7 +23,7 @@
 
     &__item {
         width: 256px;
-        height: 256px;
+        height: 253px;
         font-weight: bold;
         color: #ffffff;
         background: #f35e59;
@@ -41,6 +46,7 @@
 
     &__name {
         font-size: 1.625rem;
+        font-family: "helvetica-neue-bold";
     }
 
     &__picture {
@@ -50,5 +56,6 @@
 
     &__description {
         font-size: 1rem; 
+        font-family: "helvetica-neue-bold";
     }
 }
