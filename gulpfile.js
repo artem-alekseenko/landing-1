@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
@@ -49,7 +49,8 @@ gulp.task('styles:compile', function () {
 /* -------- JS  -------- */
 gulp.task('js', function() {
     return gulp.src([
-        'source/js/**/*.js'
+        'source/js/form.js',
+        'source/js/main.js'
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
