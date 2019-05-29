@@ -1,4 +1,4 @@
-# Вёрстка лендинга от ITDVN
+# Вёрстка лендинга для портфолио
 
 Сайт размещен на странице <https://artem-alekseenko.github.io/landing-1.github.io/>
 
